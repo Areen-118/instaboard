@@ -1,0 +1,73 @@
+:root {
+  --color-text: #222;
+  --color-error: #c00;
+  --color-bg: #f9f9f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #eee;
+    --color-bg: #121212;
+    --color-error: #ff6b6b;
+  }
+}
+
+.user-list-wrapper {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--color-bg);
+}
+
+.controls-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.load-more {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.load-more button {
+  background-color: var(--color-accent, #007bff);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.load-more button:hover,
+.load-more button:focus {
+  background-color: var(--color-hover, #0056b3);
+  outline: none;
+}
+
+.error {
+  color: var(--color-error);
+  font-weight: 500;
+}
+.controls-top input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 220px;
+}
+
+.controls-top input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+}
